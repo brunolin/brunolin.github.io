@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Teste música</title>
+		<meta charset="utf-8">
+		<style>
+			.icon {
+				width: 30px;
+				height: 30px;
+				display: inline-block;				
+			}
+			.icon.fb {
+				background: url('fb.jpeg');
+				background-size: 30px 30px;
+			}
+			.icon.git {
+				background: url('git.png');
+				background-size: 30px 30px;
+			}
+			.pointer {
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body style="overflow: hidden;font-family: serif;">
+		<div style="margin: 0 auto; text-align: center;">
+			<h1 style="">Bem vindo a página web do Brunolin</h1>
+			<hr>
+			<h2>Curta esse website com muito estilo</h2>
+
+			<img style="width: 600px;height: 400px;" src="bg.jpg">
+		</div>
+		<div style="position: absolute; bottom: 0; width: 100%; text-align: center;">
+			<h2 style="display: inline-block; vertical-align: super; margin-right: 10px;">Brunolin's web development</h2>
+			<div class="icon fb pointer" onclick="window.location='http://facebook.com/brunolinfamoso'"></div>
+			<div class="icon git pointer" onclick="window.location='http://github.com/brunolin'"></div>
+		</footer>
+		<div class="player">
+			<object data="song.mp3">
+			    <param name="src" value="song.mp3" />
+			    <param name="autostart" value="true" />
+			</object>
+		</div>
+		<script>
+			setTimeout(function() {
+				var e = document.getElementsByClassName('player')[0];
+				e.style.display = 'none';
+			}, 10);
+		</script>
+	</body>
+</html>
